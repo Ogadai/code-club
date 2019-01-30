@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Henleaze Junior School Code Club</title>
+
+<script>
+  function openScratch() {
+    const borders = {
+      width: window.outerWidth - window.innerWidth,
+      height: window.outerHeight - window.innerHeight + 35
+    };
+    window.open(`scratch_window.html`, `scratch`, `left=0,top=0,width=${window.screen.width - 300 - 2 * borders.width - 15},height=${window.screen.height - borders.height}`);
+  }
+</script>
+
+<style>
+  .btn-container {
+    padding: 20px;
+  }
+
+  .btn {
+    padding: 20px;
+    font-size: 20px;
+  }
+
+</style>
+
+</head>
+  <div class="btn-container">
+    <button class="btn" onclick="openScratch()">Open Scratch Window</button>
+  </div>
+</html>
