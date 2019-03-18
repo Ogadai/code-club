@@ -3,27 +3,54 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
   <title>Henleaze Junior School Code Club</title>
-
-  <script>
-    function openProjects() {
-      const borders = {
-        width: window.outerWidth - window.innerWidth,
-        height: window.outerHeight - window.innerHeight + 35
-      };
-
-      window.open(`https://projects.raspberrypi.org/en/codeclub/scratch-module-1`, `projects`, `left=${window.screen.width - 310},top=0,width=300,height=${window.screen.height - borders.height},zoom=0.9`);
-      window.location = `https://scratch.mit.edu/mystuff/`;
-    }
-  </script>
   
   <style>
+    body {
+      background-color: #f5f6f9;
+    }
+
     .btn-container {
-      padding: 20px;
+      padding-bottom: 20px;
+      border-bottom: 2px solid rgba(0,0,0,.25);
+    }
+
+    .btn-container h1 {
+      margin: 10px 0 0 20px;
+      font-size: 1.5em;
+    }
+
+    .btn-container a {
+      text-decoration: none;
+      color: #333;
+    }
+    .btn-container a:hover {
+      color: #666;
     }
 
     .btn {
+      display: inline-block;
       padding: 20px;
+      cursor: pointer;
+      margin: 20px 0 0 20px;
       font-size: 20px;
+      -webkit-appearance: none;
+      background-color: white;
+      border: 1px solid #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 0.3rem 0 rgba(0,0,0,.25);
+    }
+
+    .btn:hover {
+      background-color: #ddd;
+      border-color: #ddd;
+    }
+
+    .btn img {
+      width: 150px;
+      margin-left: 20px;
+    }
+    .btn img, .btn span {
+      vertical-align: middle;
     }
   
   </style>
@@ -31,7 +58,85 @@
 </head>
 <body>
   <div class="btn-container">
-    <button class="btn" onclick="openProjects()">Open Projects</button>
+    <h1>
+      <a class="project" href="https://projects.raspberrypi.org/en/codeclub/scratch-module-1">Module 1</a>
+    </h1>
+    <a class="btn project" href="https://projects.raspberrypi.org/en/projects/rock-band">
+      <span>Rock band</span>
+      <img src="images/hero-rock-band-large.png" />
+    </a>
+    <a class="btn project" href="https://projects.raspberrypi.org/en/projects/lost-in-space">
+      <span>Lost in space</span>
+      <img src="images/lost-in-space.png" />
+    </a>
+    <a class="btn project" href="https://projects.raspberrypi.org/en/projects/ghostbusters">
+      <span>Ghostbusters</span>
+      <img src="images/ghostbusters.png" />
+    </a>
+    <a class="btn project" href="https://projects.raspberrypi.org/en/projects/chatbot">
+      <span>Chatbot</span>
+      <img src="images/chatbot.png" />
+    </a>
+    <a class="btn project" href="https://projects.raspberrypi.org/en/projects/boat-race">
+      <span>Boat race</span>
+      <img src="images/boat-race.png" />
+    </a>
   </div>
+
+  <div class="btn-container">
+      <h1>
+        <a class="project" href="https://projects.raspberrypi.org/en/codeclub/scratch-module-2">Module 2</a>
+      </h1>
+    <a class="btn project" href="https://projects.raspberrypi.org/en/projects/memory">
+      <span>Memory</span>
+      <img src="images/memory.png" />
+    </a>
+    <a class="btn project" href="https://projects.raspberrypi.org/en/projects/dodgeball">
+      <span>Dodgeball</span>
+      <img src="images/dodgeball.png" />
+    </a>
+    <a class="btn project" href="https://projects.raspberrypi.org/en/projects/catch-the-dots">
+      <span>Catch the dots</span>
+      <img src="images/catch-the-dots.png" />
+    </a>
+    <a class="btn project" href="https://projects.raspberrypi.org/en/projects/clone-wars">
+      <span>Clone wars</span>
+      <img src="images/clone-wars.png" />
+    </a>
+    <a class="btn project" href="https://projects.raspberrypi.org/en/projects/create-your-own-world">
+      <span>Create your own world</span>
+      <img src="images/create-your-own-world.png" />
+    </a>
+  </div>
+
+  <div class="btn-container">
+    <h1>
+      <a class="project" href="https://projects.raspberrypi.org/en/codeclub/scratch-module-3">Module 3</a>
+    </h1>
+    <a class="btn project" href="https://projects.raspberrypi.org/en/projects/flappy-parrot">
+      <span>Flappy Parrot</span>
+      <img src="images/flappy_parrot.png" />
+    </a>
+  </div>
+
+  <script>
+      function openProjects(projectLink) {
+        const borders = {
+          width: window.outerWidth - window.innerWidth,
+          height: window.outerHeight - window.innerHeight + 35
+        };
+  
+        window.open(projectLink, `projects`, `left=${window.screen.width - 360},top=0,width=350,height=${window.screen.height - borders.height},zoom=0.9`);
+        window.location = `https://scratch.mit.edu/mystuff/`;
+      }
+  
+      const allLinks = document.querySelectorAll('a.project');
+      for(var n = 0; n < allLinks.length; n++) {
+        allLinks[n].addEventListener('click', evt => {
+          evt.preventDefault();
+          openProjects(evt.currentTarget.href);
+        })
+      }
+    </script>
 </body>
 </html>
