@@ -52,6 +52,12 @@
     .btn img, .btn span {
       vertical-align: middle;
     }
+
+    .btn span {
+      display: inline-block;
+      width: 100px;
+      text-align: center;
+    }
   
   </style>
   
@@ -73,11 +79,11 @@
       <span>Ghostbusters</span>
       <img src="images/ghostbusters.png" />
     </a>
-    <a class="btn project" href="https://projects.raspberrypi.org/en/projects/chatbot">
+    <a class="btn project" href="https://projects.raspberrypi.org/en/projects/chatbot" data-starter="http://rpf.io/chatbot-on">
       <span>Chatbot</span>
       <img src="images/chatbot.png" />
     </a>
-    <a class="btn project" href="https://projects.raspberrypi.org/en/projects/boat-race">
+    <a class="btn project" href="https://projects.raspberrypi.org/en/projects/boat-race" data-starter="http://rpf.io/boat-race-starter-on">
       <span>Boat race</span>
       <img src="images/boat-race.png" />
     </a>
@@ -91,19 +97,19 @@
       <span>Memory</span>
       <img src="images/memory.png" />
     </a>
-    <a class="btn project" href="https://projects.raspberrypi.org/en/projects/dodgeball">
+    <a class="btn project" href="https://projects.raspberrypi.org/en/projects/dodgeball" data-starter="http://rpf.io/dodgeball-on">
       <span>Dodgeball</span>
       <img src="images/dodgeball.png" />
     </a>
-    <a class="btn project" href="https://projects.raspberrypi.org/en/projects/catch-the-dots">
+    <a class="btn project" href="https://projects.raspberrypi.org/en/projects/catch-the-dots" data-starter="http://rpf.io/dots-on">
       <span>Catch the dots</span>
       <img src="images/catch-the-dots.png" />
     </a>
-    <a class="btn project" href="https://projects.raspberrypi.org/en/projects/clone-wars">
+    <a class="btn project" href="https://projects.raspberrypi.org/en/projects/clone-wars" data-starter="http://rpf.io/clone-wars-on">
       <span>Clone wars</span>
       <img src="images/clone-wars.png" />
     </a>
-    <a class="btn project" href="https://projects.raspberrypi.org/en/projects/create-your-own-world">
+    <a class="btn project" href="https://projects.raspberrypi.org/en/projects/create-your-own-world" data-starter="http://rpf.io/create-your-own-world-on">
       <span>Create your own world</span>
       <img src="images/create-your-own-world.png" />
     </a>
@@ -113,28 +119,76 @@
     <h1>
       <a class="project" href="https://projects.raspberrypi.org/en/codeclub/scratch-module-3">Module 3</a>
     </h1>
+    <a class="btn project" href="https://projects.raspberrypi.org/en/projects/cats" data-starter="http://rpf.io/cats-on">
+      <span>Cats</span>
+      <img src="images/cats.png" />
+    </a>
+    <a class="btn project" href="https://projects.raspberrypi.org/en/projects/lineup">
+      <span>Lineup</span>
+      <img src="images/lineup.png" />
+    </a>
     <a class="btn project" href="https://projects.raspberrypi.org/en/projects/flappy-parrot">
       <span>Flappy Parrot</span>
       <img src="images/flappy_parrot.png" />
     </a>
+    <a class="btn project" href="https://projects.raspberrypi.org/en/projects/binary-hero" data-starter="http://rpf.io/binary-hero-on">
+      <span>Binary Hero</span>
+      <img src="images/binary_hero.png" />
+    </a>
+  </div>
+
+  <div class="btn-container">
+    <h1>
+      <a class="project" href="https://projects.raspberrypi.org/en/codeclub/scratch-module-3">Additional Projects</a>
+    </h1>
+    <a class="btn project" href="https://codeclubprojects.org/en-GB/scratch/tech-toys/" data-starter="http://jumpto.cc/toys-go">
+      <span>Tech Toys</span>
+      <img src="images/tech_toys.png" />
+    </a>
+    <a class="btn project" href="https://codeclubprojects.org/en-GB/scratch/green-your-city/" data-starter="http://jumpto.cc/city-resources">
+      <span>Green Your City</span>
+      <img src="images/green_city.png" />
+    </a>
+    <a class="btn project" href="https://codeclubprojects.org/en-GB/scratch/archery/" data-starter="http://jumpto.cc/archery-resources">
+      <span>Archery</span>
+      <img src="images/archery.png" />
+    </a>
+    <a class="btn project" href="https://codeclubprojects.org/en-GB/scratch/sprint/" data-starter="http://jumpto.cc/sprint-resources">
+      <span>Sprint</span>
+      <img src="images/sprint.png" />
+    </a>
+    <a class="btn project" href="https://codeclubprojects.org/en-GB/scratch/beat-the-goalie/" data-starter="http://jumpto.cc/goalie-resources">
+      <span>Beat the Goalie</span>
+      <img src="images/goalie.png" />
+    </a>
+    <a class="btn project" href="https://codeclubprojects.org/en-GB/scratch/poetry-generator/" data-starter="http://jumpto.cc/poetry-go">
+      <span>Ada's Poetry Generator</span>
+      <img src="images/ada_poetry.png" />
+    </a>
+    <a class="btn project" href="http://jumpto.cc/poetry-go" data-starter="http://jumpto.cc/snowball-go">
+      <span>Snowball Fight</span>
+      <img src="images/snowball.png" />
+    </a>
   </div>
 
   <script>
-      function openProjects(projectLink) {
+      function openProjects(projectLink, starterLink) {
         const borders = {
           width: window.outerWidth - window.innerWidth,
           height: window.outerHeight - window.innerHeight + 35
         };
   
-        window.open(projectLink, `projects`, `left=${window.screen.width - 360},top=0,width=350,height=${window.screen.height - borders.height},zoom=0.9`);
-        window.location = `https://scratch.mit.edu/mystuff/`;
+        window.open(projectLink, `projects`, `left=${window.screen.width - 360},top=0,width=350,height=${window.screen.height - borders.height},zoom=0.9,location=1`);
+        window.location = starterLink;
       }
   
       const allLinks = document.querySelectorAll('a.project');
       for(var n = 0; n < allLinks.length; n++) {
         allLinks[n].addEventListener('click', evt => {
           evt.preventDefault();
-          openProjects(evt.currentTarget.href);
+
+          const starterLink = evt.currentTarget.dataset.starter || 'http://rpf.io/scratch-new'
+          openProjects(evt.currentTarget.href, starterLink);
         })
       }
     </script>
